@@ -2,7 +2,7 @@ FROM alpine:3.4
 # In case the main package repositories are down, use the alternative base image:
 # FROM gliderlabs/alpine:3.4
 
-MAINTAINER Nikyle Nguyen <NLKNguyen@MSN.com>
+MAINTAINER  littlegeenshd
 
 ARG REQUIRE="sudo build-base"
 RUN apk update && apk upgrade \
@@ -14,9 +14,9 @@ RUN apk update && apk upgrade \
 
 # Build Options:
 # See installation guide of target MPICH version
-# Ex: http://www.mpich.org/static/downloads/3.2/mpich-3.2-installguide.pdf
+# Ex: http://www.mpich.org/static/downloads/3.2.1/mpich-3.2.1-installguide.pdf
 # These options are passed to the steps below
-ARG MPICH_VERSION="3.2"
+ARG MPICH_VERSION="3.2.1"
 ARG MPICH_CONFIGURE_OPTIONS="--disable-fortran"
 ARG MPICH_MAKE_OPTIONS
 
